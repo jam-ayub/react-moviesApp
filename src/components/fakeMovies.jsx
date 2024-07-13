@@ -4,7 +4,7 @@ import { getMovies } from "../services/fakeMovieService";
 class Movies extends Component {
   state = {
     movies: getMovies(),
-  };
+  }; 
 
   renderMovieTitles() {
     if (this.state.movies.length === 0) return <p>There is not tag!!</p>;
