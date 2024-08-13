@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 30px 0 0 0;
+  padding: 0 0 0 0;
 }
 
 code {
@@ -13,6 +13,9 @@ code {
     monospace;
 }
 
+.navbar {
+  margin-bottom: 30px;
+}
 .clickable {
   cursor: pointer;
 }
