@@ -1,6 +1,6 @@
 import React from "react";
 
-const Input = ({ name, lable, value, onChange }) => {
+const Input = ({ name, lable, value, error, onChange }) => {
   return (
     <div className="form-group">
       <lable htmlFor={name}>{lable}</lable>
@@ -12,9 +12,9 @@ const Input = ({ name, lable, value, onChange }) => {
         type="text"
         className="form-control"
       />
+      {error && <div className="alert alert-danger">{error}</div>}
     </div>
   );
 };
 
 export default Input;
-
