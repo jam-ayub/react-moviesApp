@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { getMovies } from "../services/fakeMovieService";
-import { getGenres } from "../services/fakeGenreService";
+import { getGenres } from "../services/genreService";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
 import { paginate } from "./utils/paginate";
@@ -21,8 +21,9 @@ class Movies extends Component {
     sortColumn: { path: "title", order: "acs" },
   };
 
-  componentDidMount() {
-    const genres = [{ _id: "", name: "All Movies" }, ...getGenres()];
+  async componentDidMount() {
+    const { data } = await getGenres();
+    const genres = [{ _id: "", name: "All Movies" }, ...data];
     this.setState({ movies: getMovies(), genres });
   }
 
