@@ -12,7 +12,6 @@ import LoginForm from "./components/common/loginForm";
 import RegisterForm from "./components/common/registerForm";
 import Logout from "./components/logout";
 import auth from "./services/authService";
-import jwtDecode from "jwt-decode";
 import "./App.css";
 import 'react-toastify/dist/ReactToastify.css';
 
